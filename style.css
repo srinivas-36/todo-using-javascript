@@ -1,0 +1,156 @@
+body{
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+}
+
+
+.main{
+    padding: 30px;
+    width: 90%;
+    display: flex;
+    height:90vh;
+}
+
+.todo-container {
+    width: 40%;
+    max-width: 600px;
+    height: 20vh;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .todo-container h2{
+    color: white;
+    text-align: center;
+  }
+  .todo-container input{
+    width: 70%;
+    padding: 15px;
+    margin-right: 20px;
+    border-radius: 7px;
+    border: 1px solid black;
+    outline: none;
+  }
+  .todo-container button{
+    padding: 15px;
+    cursor: pointer;
+    color: white;
+    background: none;
+    border-radius: 7px;
+    transition: 0.3s ease;
+    border: 1px solid rgb(78, 205, 66);
+  }
+  .todo-container button:hover{
+    background:rgb(78, 205, 66) ;
+  }
+  .columns {
+    height: 60vh;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .columns p{
+    color: white;
+    font-size: 25px;
+  }
+  .column {
+    flex: 1;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .column h3{
+    color: white;
+  }
+  li {
+    border: 1px solid rgb(255, 247, 247);
+    padding: 13px;
+    margin-bottom: 10px;
+    width: 90%;
+    color: white;
+    display: flex;
+    /* box-shadow: 2px 0px 3px 1px rgba(224,224,224,1); */
+    /* align-items: center; */
+  }
+  li input{
+    width: 5%;
+    margin-right: 5px;
+  }
+  li span{
+    display: flex;
+    width: 70%;
+    align-items: center;
+
+  }
+  li button {
+    cursor: pointer;
+    padding: 8px 15px;
+    margin: 0 10px;
+    margin-left: auto;
+  }
+  li button.edit{
+
+      border: 1px solid  rgb(95, 95, 242);
+      transition: 0.3s ease-in;
+      background: none;
+      color: white;
+  }
+  li button.edit:hover{
+        background-color:  rgb(95, 95, 242);
+  
+    }
+  li button.delete {
+    border: 1px solid rgb(244, 97, 97);
+    transition: 0.3s ease-in;
+    background: none;
+    background-color: rgb(244, 97, 97);
+    color: white;
+}
+
+  /* Edit Popup */
+  .edit-popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    box-shadow: 2px 2px 2px 2px rgb(248, 240, 240);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .edit-popup-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #fefefe;
+    margin: 20% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    text-align: center;
+  }
+#editTaskHeading{
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+}
+  .edit-popup-content input {
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .edit-popup-content button{
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid rgb(104, 242, 95);
+    background-color: rgb(104, 242, 95);
+    color: white;
+  }

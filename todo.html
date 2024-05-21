@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+
+        <div class="todo-container">
+          <h2>To-Do List</h2>
+          <input type="text" id="taskInput" placeholder="Enter task">
+          <button onclick="addTask()">Add Task</button>
+        </div>
+        <div class="columns">
+            <div class="column">
+              <h3>Pending Tasks</h3>
+              <ul id="pendingTasks"></ul>
+              <p id="noTasksMessage" style="display: none;text-align: center;">No todos are available</p>
+            </div>
+            <div class="column">
+              <h3>Completed Tasks</h3>
+              <ul id="completedTasks"></ul>
+            </div>
+          </div>
+          
+    </div>
+  <div id="editPopup" class="edit-popup">
+    <div class="edit-popup-content">
+      <span id="editTaskHeading">Edit Task</span>
+      <div class="details">
+
+          <input type="text" id="editedTaskInput" placeholder="Edit task">
+          <button onclick="updateTask()">Update</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
